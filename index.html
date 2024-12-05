@@ -4,28 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta</title>
+
+    <style>
+        /* Estilo general de la página */
+        body {
+            font-family: 'Arial', sans-serif; /* Fuente lisa */
+            background-color: #f4f4f4; /* Color de fondo claro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura total de la ventana */
+        }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #800000; /* Carmesí (sangre) */
+            color: #000000; /* Letra negra */
+            border-radius: 10px;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: 2px solid #800000;
+            border-radius: 5px;
+        }
+
+        /* Estilo para los botones */
+        button {
+            background-color: #8B0000; /* Carmesí oscuro */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #660000; /* Carmesí más oscuro al pasar el mouse */
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Estilo para el contador de clics */
+        #noCounter {
+            color: #000;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Encuesta</h1>
+    <div class="container">
+        <h1>Encuesta</h1>
 
-    <!-- Pregunta 1 -->
-    <p>¿Quién eres?</p>
-    <select id="question1">
-        <option value="K">K</option>
-        <option value="C">C</option>
-        <option value="F">F</option>
-    </select>
+        <!-- Pregunta 1 -->
+        <p>¿Quién eres?</p>
+        <select id="question1">
+            <option value="K">K</option>
+            <option value="C">C</option>
+            <option value="F">F</option>
+        </select>
 
-    <!-- Pregunta 2 -->
-    <p>Si pudieras decirme algo, ¿qué sería?</p>
-    <textarea id="question2" placeholder="Escribe tu respuesta aquí"></textarea>
+        <!-- Pregunta 2 -->
+        <p>Si pudieras decirme algo, ¿qué sería?</p>
+        <textarea id="question2" placeholder="Escribe tu respuesta aquí"></textarea>
 
-    <!-- Pregunta 3 -->
-    <p>¿Te gustaría un café conmigo?</p>
-    <button id="yesButton" onclick="saveAnswer('¿Te gustaría un café conmigo?', 'Sí')">Sí</button>
-    <button id="noButton">No</button>
+        <!-- Pregunta 3 -->
+        <p>¿Te gustaría un café conmigo?</p>
+        <button id="yesButton" onclick="saveAnswer('¿Te gustaría un café conmigo?', 'Sí')">Sí</button>
+        <button id="noButton">No</button>
 
-    <p id="noCounter"></p>
+        <p id="noCounter"></p>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
